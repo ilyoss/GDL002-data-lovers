@@ -1,12 +1,14 @@
 require('../src/data.js');
 const steam = require('../src/data/steam/steam.json');
 
+//Test to make sure STEAM is an object
 describe('STEAM', () => {
   it('Should be an object', () => {
     expect(typeof steam).toBe('object');
   });
 });
 
+//Tests to make sure my functions are correct functions
 describe('getTitles', () => {
   it('Should be a function', () => {
     expect(typeof window.dataLovers.getTitles).toBe('function');
@@ -24,13 +26,3 @@ describe('getDate', () => {
     expect(typeof window.dataLovers.getDate).toBe('function');
   });
 });
-
-// describe('example', () => {
-//   it('is a function', () => {
-//     expect(typeof example).toBe('function');
-//   });
-//
-//   it('returns `example`', () => {
-//     expect(example()).toBe('example');
-//   });
-// });

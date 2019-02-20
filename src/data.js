@@ -13,6 +13,7 @@ window.dataLovers = {
 // const newsNumber = Object.keys(STEAM.appnews.newsitems);
 const newsNumber = 10;
 
+//I call my functions to initialize my arrays for further use on main.js
 getAuthors(newsNumber);
 getTitles(newsNumber);
 getDate(newsNumber);

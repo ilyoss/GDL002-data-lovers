@@ -270,69 +270,15 @@ nav ul li a .segundo {
 	background:#07adb3; /*Links*/
 }
  
-nav ul li a .tercero {
-	background:#f25724;
-}
- 
-nav ul li a .cuarto {
-	background:#d64908; /*Acerca de*/
-}
- 
-nav ul li a .quinto {
-	background:#27d117;
-}
 
-button{
-
-cursor: pointer;
-display: inline-block;
-font-family: "chelsea market";
-font-size: 16px;
-height: 100px;
-margin-bottom: 4px;
-margin-left: 2px;
-margin-right: 2px;
-margin-top: 4px;
-padding-bottom: 16px;
-padding-left: 32px;
-padding-right: 32px;
-padding-top: 16px;
-text-align: center;
-text-decoration: none;
-text-decoration-color: rgb(231, 18, 18);
-text-decoration-line: none;
-text-decoration-style: solid;
-transition-delay: 0s;
-transition-duration: 1s;
-transition-property: width;
-transition-timing-function: ease;
-width: 150px;
-
-
+  .ir-arriba {
+	display:none;
+	padding:20px;
+	background:#024959;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
 }
-button {
-    background-color: rgb(224, 224, 220); /* Green */
-    border: none;
-    color: rgb(250, 245, 245);
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 20px;
-  }
-  
-  button {
-    background-color: rgb(255, 255, 255); /*color de fondo de boton arrriba*/
-    color: black; 
-    border: 2px solid rgb(240, 240, 237); /*borde*/
-  }
-  
-  button:hover {
-    background-color: rgb(29, 185, 196); /*sombra*/
-    color: rgb(8, 8, 8);
-  }

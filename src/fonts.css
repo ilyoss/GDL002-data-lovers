@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?i5rrwi');
+  src:  url('fonts/icomoon.eot?i5rrwi#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?i5rrwi') format('truetype'),
+    url('fonts/icomoon.woff?i5rrwi') format('woff'),
+    url('fonts/icomoon.svg?i5rrwi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home3:before {
+  content: "\e902";
+}
+.icon-pacman:before {
+  content: "\e916";
+}
+.icon-bug:before {
+  content: "\e999";
+}
+.icon-rocket:before {
+  content: "\e9a5";
+}
+.icon-lab:before {
+  content: "\e9aa";
+}
+.icon-earth:before {
+  content: "\e9ca";
+}
+.icon-arrow-up2:before {
+  content: "\ea3a";
+}
+.icon-circle-up:before {
+  content: "\ea41";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
+.icon-shift:before {
+  content: "\ea4f";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-steam:before {
+  content: "\eaac";
+}
+.icon-steam2:before {
+  content: "\eaad";
+}
+.icon-reddit:before {
+  content: "\eac6";
+}

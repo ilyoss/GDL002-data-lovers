@@ -97,12 +97,13 @@ text-align: center;
     background-color: rgb(255, 253, 253); /*ventana desplagable de seleccion*/
     color: rgb(189, 186, 4);
     padding: 25px;
-    font-size: 15px;
+    font-size: 20px;
     border: none;
     height: 20px;
     text-align: center;
     font-family: "ubuntu";
     border-radius: 10px;
+    font-weight: bold;
   }
   
   .dropdownMenu {
@@ -119,6 +120,7 @@ text-align: center;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    
   }
   
   .dropdownElements a {
@@ -160,7 +162,7 @@ header {
 
 h1{
     text-align: center;
-    margin: 60px auto;
+    margin: 80px auto;
     display: block;
     font-family: "Chelsea Market";
     
@@ -170,7 +172,7 @@ nav {
     position: absolute;
     left:0;
     right:0;
-	margin:20px auto;
+	margin:60px auto;
 	max-width:1000px;
     width:90%;
     
@@ -263,13 +265,76 @@ nav > ul > li > a:hover > span {
  
 /*Colores*/
 nav ul li a .primero { /*laba news*/
-	background:#d4c704;
+	background:#dacb06;
 }
  
 nav ul li a .segundo {
-	background:#07adb3; /*Links*/
+	background:#078fad; /*Links*/
 }
+@media screen and (max-width: 800px) { /*aplicacion a dispositivos/*/
+	body {
+		padding-top:80px;
+	}
  
+	.nav {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+ 
+	.nav.primero { /*boton de menu*/
+		display: block;
+		padding: 20px;
+		color: rgb(36, 3, 3);
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+ 
+	.nav span {
+		float: right;
+		font-size: 40px;
+	}
+ 
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+ 
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+ 
+	header nav ul li a {
+		display: block;
+	}
+ 
+	header nav ul li:hover.segundo {
+		display: none;
+	}
+ 
+	header nav ul li.segundo { /*hijos del menu*/
+		width: 100%;
+		position: relative;
+	}
+ 
+	header nav ul li .segundo li a {
+		margin-left:20px;
+	}
+ 
+	header nav ul li.caret { /*para elementos mobiles*/
+		float: right;
+	}
+}
+
 
   .ir-arriba {
 	display:none;
@@ -280,5 +345,6 @@ nav ul li a .segundo {
 	cursor:pointer;
 	position: fixed;
 	bottom:20px;
-	right:20px;
+    right:20px;
+    z-index: 1;
 }

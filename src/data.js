@@ -1,5 +1,12 @@
 const news = STEAM.appnews.newsitems;
-console.log(news);
+
+menu();
+
+//I print my news elements inside my root div on HTML.
+function menu(){
+  document.getElementById("root").innerHTML = `
+  ${news.map(newsTemplate).join("")}`
+}
 
 function newsTemplate(news){
   return `
@@ -12,5 +19,85 @@ function newsTemplate(news){
   `;
 }
 
-document.getElementById("root").innerHTML = `
-${news.map(newsTemplate).join("")}`
+function openLink(){
+  let link = window.open(url, '_blank');
+}
+
+//Function to filter news by whichever property from the Object
+function dynamicSort(property) {
+    var sortOrder = 1;
+    if(property[0] === "-") {
+        sortOrder = -1;
+        property = property.substr(1);
+    }
+    return function (a,b) {
+        if(sortOrder == -1){
+            return b[property].localeCompare(a[property]);
+        }else{
+            return a[property].localeCompare(b[property]);
+        }
+    }
+}
+//Function to empty my root div and erase the news, before I displat them organized based on the filters
+function emptyDiv(){
+  document.getElementById("root").innerHTML = "";
+}
+//Function that empties my root div and displays the news arranged by title A-Z
+function displayNewsByTitle(){
+  let sortedNewsByTitle = news;
+  sortedNewsByTitle.sort(dynamicSort("title"));
+  emptyDiv();
+  //I print my news elements inside my root div on HTML.
+  document.getElementById("root").innerHTML = `
+  ${sortedNewsByTitle.map(newsTemplate).join("")}`
+}
+
+function filterNewsByAuthor(){
+  const sortedNewsByAuthor = news;
+  sortedNewsByAuthor.sort(dynamicSort("author"));
+  let emptyAuthorsIndex = [];
+  emptyDiv();
+  for(let i = 0; i < news.length; i++){
+    if(sortedNewsByAuthor[i].author == ""){
+      emptyAuthorsIndex.push(sortedNewsByAuthor[i]);
+    }
+  }
+  sortedNewsByAuthor.splice(0, emptyAuthorsIndex.length);
+  console.log(news);
+
+  //I print my news elements inside my root div on HTML.
+  document.getElementById("root").innerHTML = `
+  ${sortedNewsByAuthor.map(newsTemplate).join("")}`
+}
+
+//Function that empties my root div and displats the news arranged by date (most recent)
+function displayNewsByDate(){
+  let sortedNewsByDate = news;
+  sortedNewsByDate.sort(function(a, b) {
+    if (a.id !== b.id) {
+        return a.id - b.id
+    }return a.name > b.name ? 1 : -1;
+  });
+  emptyDiv();
+  //I print my news elements inside my root div on HTML.
+  document.getElementById("root").innerHTML = `
+  ${sortedNewsByDate.map(newsTemplate).join("")}`
+
+  console.log(sortedNewsByDate);
+}
+
+//Function to convert the date (EPOCH to Day/Month/Year format)
+function calculateDate(epochDate){
+  let humanTime;
+  let date = new Date(epochDate*1000);
+  //I start to breakdown the date.
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+  // let hours = date.getHours();
+  // let minutes = date.getMinutes();
+  // let seconds = date.getSeconds();
+  //I paste the data I need to show for the date and return that value as a string
+  humanTime = day + "-" + month + "-" + year;
+  return humanTime;
+}

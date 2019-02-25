@@ -34,6 +34,9 @@ img {
   font-size: 15px;
   border: none;
   height: 30px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .dropdownElements {
@@ -44,6 +47,8 @@ img {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border-radius: 20px;
+  border-top-left-radius: 0;
 }
 
 .dropdownElements a {
@@ -100,12 +105,13 @@ img {
   display: none;
 }
 
-.news:hover .newsLink{
-  visibility: visible;
-}
-
 .news:hover .newsPhoto {
   visibility: hidden;
+}
+
+.news:hover{
+  cursor: pointer;
+
 }
 
 .news-photo {

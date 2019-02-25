@@ -1,3 +1,6 @@
+const steamNews = window.STEAM.appnews;
+console.log(steamNews);
+
 //I declare my event listeners for my HTML elements
 let authors = dataLovers.getAuthors;
 let newsWithAuthor = "";

@@ -1,72 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
     <meta charset="utf-8">
-  	<title>Menu</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!--Llamo a mi archivo CSS para darle estilo a mi pagina-->
-    <link rel="stylesheet" href="style.css">
-   	<script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="main.js"></script>
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <span class="ir-arriba icon-arrow-up2"></span>
-    <!--Laba news logo-->
-    <h1><img src="https://scontent.fgdl2-1.fna.fbcdn.net/v/t1.15752-9/52486491_2120122838063722_6013020013298974720_n.jpg?_nc_cat=104&amp;_nc_ht=scontent.fgdl2-1.fna&amp;oh=caa28ef3df4822434dc69b33d2001abc&amp;oe=5CE235DE" width="400" height="400"> </h1>
-
-    <!--Agregamos contenido para que aparezca la barra vertical del navegador-->
-    <section class="contenido">
-
-    <nav>
-      <ul>
-        <!--Top menu-->
-        <li><a href="#"><span class="primero"><i class="icon icon-lab"></i></span>Laba News</a></li>
-        <li><a href="#"><span class="segundo"><i class="icon icon-rocket"></i></span>Links</a>
-          <ul>
-            <li><a href="http://www.teamfortress.com/post.php?id=46099 " target="_blank">Team Fortress 2*  </a></li>
-            <li><a href="https://steamstore-a.akamaihd.net/news/externalpost/tf2_blog/2403127338447896497">Team Fortress 2 Update Released*</a></li>
-            <li><a href="https://steamstore-a.akamaihd.net/news/externalpost/rps/2403126706534048982" target="blank">All of Halloween is happening in TF2 s Scream Fortress X</a></li>
-            <li><a href="https://steamstore-a.akamaihd.net/news/externalpost/tf2_blog/3316234163932872071" target="blank">Operation Canteen Crasher!</a></li>
-            <li><a href="https://steamstore-a.akamaihd.net/news/externalpost/pcgamer/2403127338429434053" target="blank">Team Fortress 2008 throwback mod Steam page removed (Updated</a></li>
-            <li><a href="https://steamstore-a.akamaihd.net/news/externalpost/eurogamer/2403127338428683883" target="blank">Team Fortress 2 mod reverts the game to 2008 - and it's coming to Steam</a></li>
-            <li><a href="https://store.steampowered.com/news/45119/" target="blank">Team Fortress 2 Update Released*</a></li>
-          </ul></li>
-        <li><a href="#"><span class="segundo"><i class="icon icon-facebook"></i></span>Acerca de</a>
-          <ul>
-            <li><a href="https://www.facebook.com/Laba-News-391420508354050/" target="blank">Laba News</a></li>
-          </ul></li>
-      </ul>
-    </nav>
-
-
-    <!--Division donde se contiene el titulo y el menu dropdown para los filtros de las noticias-->
-    <div class="header">
+      <div class="header">
+      <h1>Laba News</h1>
       <div class="dropdownMenu">
         <button class="dropBtn" type="button" name="button">Filtrar</button>
         <div class="dropdownElements">
-          <a href="#">Orden Alfabetico</a>
-          <a href="#">Autor</a>
-          <a href="#">Fecha</a>
+          <a id="organizeByDate"href="#">Ordenar por fecha</a>
+          <a id="filterByAuthor"href="#">Filtrar noticias con autor</a>
         </div>
       </div>
     </div>
 
-    <!--Division donde se tiene el contenedor de las noticias y los elementos de las noticias-->
-    <div class="flexContainer">
-      <div class="flexItem"><p class="title">Team Fortress 2 Update Released<img src="http://media.steampowered.com/apps/tf2/tf06_thenakedandthedead/images/comic/2048x1536/001.png?v=2" width="330" height="330"></p></div>
-      <div class="flexItem"><p class="title">All of Halloween is happening <img src="http://www.teamfortress.com/blizzbobarrabas/images/screamfortress.jpg" width="330" height="330"></p></div>
-      <div class="flexItem"><p class="title">Operation Canteen Crasher!Noticia 3<img src="https://i.ytimg.com/vi/ExqRvq0IYW0/maxresdefault.jpg" class="title" width="330" height="330"></p></div>
-      <div class="flexItem"><p class="title">Team Fortress 2008 throwback mod Steam page removed (Updated)<img src="https://media.alienwarearena.com/thumbnail_630x315/80a2916fbc7eb6bd677dd81adc536f28.png" width="300" height="300"></p></div>
-      <div class="flexItem"><p class="title">Team Fortress 2 mod reverts the game to 2008 - and it's coming to Steam<img src="https://cdn.gamer-network.net/2018/articles/2018-10-25-11-34/team-fortress-2008-mod-transports-tf2-back-in-time-and-its-coming-to-steam-1540463665315.jpg" width="300" height="300"></p></div>
-      <!-- <div class="flexItem"><p class="title">Noticia 6</p></div>
-      <div class="flexItem"><p class="title">Noticia 7</p></div>
-      <div class="flexItem"><p class="title">Noticia 8</p></div>
-      <div class="flexItem"><p class="title">Noticia 9</p></div>-->
-    </div>
-    </section>
+    <div id="root"></div>
 
+
+
+    <script src="./data/steam/steam.js"></script>
+    <script src="data.js"></script>
     <script src="main.js"></script>
-    <script src="index.html"></script>
   </body>
 </html>

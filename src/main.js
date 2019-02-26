@@ -1,4 +1,4 @@
-	
+	//funcion boton ir arriba//
 $(document).ready(function(){
  
 	$(".ir-arriba").click(function(){
@@ -15,7 +15,8 @@ $(document).ready(function(){
 		}
 	});
  
-});
+}); 
+//*****//
 //
 //cambiar imagen de fondo por una lista aleatoria.
 //

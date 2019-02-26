@@ -1,99 +1,177 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400");
 @import url('https://fonts.googleapis.com/css?family=Chelsea+Market');
 
-.flexContainer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-shrink: 1;
+ 
+
+body {
+    font-family: "ubuntu";
+    background-color: #fffefe;
+    color: rgb(255, 255, 255);
+    padding: 20px 0 28px 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.app-title {
+    text-align: right ;
+    font-weight: normal;
+    font-size: 5.6rem;
+
+    
+}
+
+#root {
+    text-align: center;
+}
+
+.news {
+    max-width: 400px;
+    height: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 30px 30px 30px rgba(254, 255, 255, 0.979);
     overflow: hidden;
-    border-radius: 10px;
-border-bottom-left-radius: 10px;
-border-bottom-right-radius: 10px;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-color: rgb(0, 0, 0);
-font-family: "ubuntu";
-overflow-x: hidden;
-overflow-y: hidden;
-position: relative;
-text-align: center;
-align-content: flex-start;
-background-color: rgb(255, 254, 254); /*color de fondo de la tabla*/
-border-bottom-left-radius: 5px;
-border-bottom-right-radius: 5px;
-border-top-left-radius: 5px;
-border-top-right-radius: 5px;
-color: rgb(0, 0, 0);
+    flex-direction: row;
+    display: inline-block;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    border-radius: 0px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 30px;
+    background-size: cover;/*sólo para ejemplo*/
+    background-image: url("https://c.wallhere.com/photos/c8/99/Team_Fortress_2_Pyro_character_humor_video_games-255004.jpg!d");
+    margin: 0px auto;
+    opacity: 0.9 ;
+    color: rgb(255, 255, 255);
+    cursor: grab;
+    font-family: "ubuntu";
+
+     }
+
+.newsBrief {
+    visibility: hidden;
+    font-size: 1.4rem; 
+    margin: 0;
+}
+
+.newsPhoto {
+    z-index: -1;
+}
+
+.newsLink {
+    visibility: hidden;
+    
+}
+
+.news:hover .newsBrief {
+    visibility: visible;
+}
+
+.news:hover .newsTitle {
+    display: none;
+}
+
+.news:hover .newsAuthor {
+    display: none;
+}
+
+.news:hover .newsLink {
+    visibility: visible;
+}
+
+.news:hover .newsPhoto {
+    visibility: hidden;
+}
+
+.news-photo {
+    float: left;
+    width: 40%;
+    margin-right: 15px;
+}
+
+.newsTitle {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0 0 1rem 0;
+}
+
+.newsAuthor {
+    font-size: 0.9rem;
+    color: #888;
+    vertical-align: middle;
+}
+
+.newsLink {
+    font-size: 1.9rem;
+    
+}
+
+.foods-list {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 17px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.footer {
+    font-size: 0.7rem;
+    color: #888;
+    text-align: center;
+    margin: 0;
+}
 
 
 
-  }
-  
 header {
     width: 100%;
     height: 50px;
     text-align: left;
     padding: 5px;
     font-family: "ubuntu";
-font-size: 40px;
-height: 150px;
-margin-top: 10px;
-overflow: hidden;
-overflow-x: hidden;
-overflow-y: hidden;
-padding-bottom: 5px;
-padding-left: 5px;
-padding-right: 5px;
-padding-top: 5px;
-width:684px;
-  }
-  
-  .footer {
-    text-align: center;
-    font-size: 20px;
-  }
-  
-  .title {
-    visibility: hidden;
-  }
-  
-  .flexContainer > div {
-    background-color: rgb(247, 243, 243); /*color de ventanas*/
-    height: 400px;
-    margin: 15px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 30px;
-    flex-basis: 430px;
-    font-family: "ubuntu";
-    font-size: 20px;
-    align-content: flex-start;
-    border-radius: 20px;
-    align-content: flex-start;
-border-bottom-left-radius: 35px; /*borde redondeado esquina inferior izq*/
-border-bottom-right-radius: 5px;
-border-top-left-radius: 5px;
-border-top-right-radius: 35px; /*borde redondeado esquina superior derecha*/
-color: rgb(5, 2, 2); /* color de texto (titulo de noticia) de imagen*/
-margin-bottom: 5px;
-margin-left: 5px;
-margin-right: 5px;
-margin-top: 5px;
-min-height: 400px;
-text-align: center;
+    font-size: 40px;
+    height: 150px;
+    margin-top: 10px;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    width: 684px;
+}
 
-  }
-  
-  .flexItem:hover {
+.footer {
+    text-align: center;
+    font-size: 20px;
+}
+
+.title {
+    visibility: hidden;
+}
+
+
+
+
+.flexItem:hover {
     background-color: rgb(138, 135, 135);
-  }
-  
-  .flexItem:hover .title {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .dropBtn {
+}
+
+    .flexItem:hover .title {
+        visibility: visible;
+        opacity: 1;
+    }
+
+.dropBtn {
     background-color: rgb(255, 253, 253); /*ventana desplagable de seleccion*/
     color: rgb(189, 186, 4);
     padding: 25px;
@@ -104,247 +182,207 @@ text-align: center;
     font-family: "ubuntu";
     border-radius: 10px;
     font-weight: bold;
-  }
-  
-  .dropdownMenu {
+}
+
+.dropdownMenu {
     position: absolute;
     right: 10px;
     top: 10px;
     display: inline-block;
-  }
-  
-  .dropdownElements {
+}
+
+.dropdownElements {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(235, 21, 21, 0.2);
     z-index: 1;
-    
-  }
-  
-  .dropdownElements a {
-    color: rgb(12, 11, 11); /*color de letra de pestaña de seleccion*/
-    padding: 12px 16px;
-    text-decoration: none;
+}
+
+    .dropdownElements a {
+        color: rgb(12, 11, 11); /*color de letra de pestaña de seleccion*/
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: "Chelsea market";
+    }
+
+        .dropdownElements a:hover {
+            background-color: rgb(201, 183, 20);
+        }
+
+.dropdownMenu:hover .dropdownElements {
     display: block;
-    font-family: "Chelsea market";
-  }
-  
-  .dropdownElements a:hover {background-color: rgb(201, 183, 20);}
-  .dropdownMenu:hover .dropdownElements {display: block;}
-  .dropdownMenu:hover .dropBtn {background-color: #d0d8d0;}
+}
 
-.url {cursor: url(myBall.cur),auto;} /*Cambio del cursor automatico para URL*/
-.img {/*Propiedades de la imagen*/                   
-        width: 100px;
-        height: 100px;
-        background: red;
-        -webkit-transition: width 1s, height 1s; /* For Safari 3.1 to 6.0 */
-        transition: width 1s, height 1s;
-        
-    }
+.dropdownMenu:hover .dropBtn {
+    background-color: #d0d8d0;
+}
 
- .img:hover {
+.url {
+    cursor: url(myBall.cur),auto;
+}
+/*Cambio del cursor automatico para URL*/
+img { /*Propiedades de la imagen logo*/
+   position: left;
+    width: 100px;
+    height: 100px;
+    -webkit-transition: width 1s, height 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s, height 1s;
+}
+
+    img:hover {
         width: 400px;
-        height: 800px;
+        height: 400px;
     }
 
 
-  
+
 header {
-	margin-top:10px;
+    margin-top: 10px;
     width: 100%;
     overflow: hidden;
     height: 150px;
     position: center;
 }
 
-h1{
+h1 {
     text-align: center;
-    margin: 80px auto;
+    margin: 0px auto;
     display: block;
     font-family: "Chelsea Market";
-    
+    color: #2b61522a;
 }
-nav {
-    top:-20px;
-    position: absolute;
-    left:0;
-    right:0;
-	margin:60px auto;
-	max-width:1000px;
-    width:90%;
-    
-}
- 
-nav ul {
-	list-style:none;
-}
- 
-nav > ul {
-	display:table; /*Quitamos el overflow hidden que estaba aqui*/
-	width:100%;
-    background:rgb(8, 8, 8); /*Color de manu*/
-    font-family: "Chelsea Market";
-    font-size: 20px;
-	position:relative;
-}
- 
-nav > ul li {
-	display:table-cell;
-}
- 
-/*Sub-menu*/
-nav > ul > li:hover > ul {
-	display:block;
-	height:100%;
-}
- 
-nav > ul > li > ul {
-	display:block;
-	position:absolute;
-	background:rgb(7, 7, 7); /*Barra desplazable*/
-	left:0;
-	right:0;
-	overflow:hidden;
-	height:0%;
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	-ms-transition: all .3s ease;
-	-o-transition: all .3s ease;
-    transition: all .3s ease;
-    opacity: .9;
-}
- 
-nav > ul li a {
-	color:rgb(248, 246, 246); /*Color letra de la navegacion*/
-	display:block;
-	line-height:20px;
-	padding:20px;
-	position: relative;
-	text-align:center;
-	text-decoration:none;
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	-ms-transition: all .3s ease;
-	-o-transition: all .3s ease;
-	transition: all .3s ease;
-}
- 
-nav > ul > li > ul > li a:hover {
-    background:#070707; /*Color seleccionador*/
-    font-family: "ink free";
-    color: #18d1d1; /*color de letra al poner el cursor sobre liks*/
-    
-}
- 
-nav > ul > li > a span {
-	background:#074e6e;
-	display:block;
-	height:100%;
-	width:100%;
-	left:0;
-	position:absolute;
-	top:-55px;
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	-ms-transition: all .3s ease;
-	-o-transition: all .3s ease;
-	transition: all .3s ease;
-}
- 
-nav > ul > li > a span .icon {
-	display:block;
-	line-height:60px;
-}
- 
-nav > ul > li > a:hover > span {
-	top:0;
-}
- 
-/*Colores*/
-nav ul li a .primero { /*laba news*/
-	background:#dacb06;
-}
- 
-nav ul li a .segundo {
-	background:#078fad; /*Links*/
-}
-@media screen and (max-width: 800px) { /*aplicacion a dispositivos/*/
-	body {
-		padding-top:80px;
-	}
- 
-	.nav {
-		display:block;
-		width:100%;
-		position: fixed;
-		top:0;
-		background:#E6344A;
-	}
- 
-	.nav.primero { /*boton de menu*/
-		display: block;
-		padding: 20px;
-		color: rgb(36, 3, 3);
-		overflow: hidden;
-		font-size: 25px;
-		font-weight: bold;
-		text-decoration: none;
-	}
- 
-	.nav span {
-		float: right;
-		font-size: 40px;
-	}
- 
-	header nav {
-		width: 80%;
-		height: calc(100% - 80px);
-		position: fixed;
-		right:100%;
-		margin: 0;
-		overflow: scroll;
-	}
- 
-	header nav ul li {
-		display: block;
-		border-bottom:1px solid rgba(255,255,255,.5);
-	}
- 
-	header nav ul li a {
-		display: block;
-	}
- 
-	header nav ul li:hover.segundo {
-		display: none;
-	}
- 
-	header nav ul li.segundo { /*hijos del menu*/
-		width: 100%;
-		position: relative;
-	}
- 
-	header nav ul li .segundo li a {
-		margin-left:20px;
-	}
- 
-	header nav ul li.caret { /*para elementos mobiles*/
-		float: right;
-	}
+h2 {
+color: #ffffff; /*color letra de titulo*/
+font-family: "Chelsea Market";
+text-align: center;
+text-decoration: none;
+
 }
 
+p{
+    color: #ffffff; /*color letra de contenido (parrafo)*/
+    font-family: "Ubuntu";
+    text-align: center;
+    text-decoration: none; 
+    font-size: 35px;
+}
 
-  .ir-arriba {
-	display:none;
-	padding:20px;
-	background:#024959;
-	font-size:20px;
-	color:#fff;
-	cursor:pointer;
-	position: fixed;
-	bottom:20px;
-    right:20px;
+    /*boton de ir arriba*/
+    .ir-arriba {
+        display: none;
+        padding: 20px;
+        background: #024959;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1;
+    }
+ 
+
+
+  /********************menú*/
+  
+  
+
+  .nav{
+    position:absolute;
+    width:200px;
+    height:100vh;
+    top:0;
+    left:-220px; /*Ocultamos el menú en la parte izquierda para que no se vea a menos que pulsemos sobre la hamburguesa*/
+    padding-top:47px;
+    background-color: rgb(73, 74, 75); /*fondo de menú*/
+    border-right:4px solid rgba(3, 148, 148, 0.562); /*borde de menú*/
+    transition:all .5s ease; /*Damos a la caja del menú una transición para que tenga un desplazamiento suave*/
     z-index: 1;
-}
+    
+  }
+     /*Estilos de los li del menú*/
+     .nav__item {
+       display:block;
+       width:96%;
+       margin:0 auto;
+       line-height:2;
+       position:relative; /*Le damos una posición relativa para posteriormente añadirle el triangulo que indica que se está en la página actual del menú*/
+       border-bottom:.5px solid rgb(139, 141, 47); /*linea divisoria*/
+       border-top:.5px solid rgba(11, 129, 109, 0.5);
+       background-color:transparent;
+       font-family: "Ubuntu";
+       text-align:center;
+       color:rgba(221, 231, 228, 1);
+       text-decoration: none;
+     }
+         /*Damos colocamos el triangulo negro a la pestaña del menú dónde nos encontramos actualmente*/
+         .current:before {
+            content:"";
+            width:0;
+            height:0;
+            position:absolute; /*Le damos al before una posición absoluta relativa al li que lo contiene*/
+            border-top:17px solid transparent;
+            border-left:15px solid rgba(18, 204, 218, 0.767); /*triangulo del menu*/
+            border-bottom:17px solid transparent;
+            top:0px;
+            right:-15px; /*Lo posicionamos -15px a la derecha de su contenedor*/
+            z-index:4; /*le otorgamos un z-index alto para que se posicione arriba de otros elementeos*/
+         }
+        /*Colocamos el borde verde al triangulo por medio de otro trangulo verde*/
+        .current:after {
+            content:"";
+            width:0;
+            height:0;
+            position:absolute;/*Le damos al after una posición absoluta relativa al li que lo contiene*/
+            border-top:16.5px solid transparent;
+            border-left:17px solid rgba(7, 106, 124, 0.295); /*Pico del menú*/
+            border-bottom:17px solid transparent;
+            top:.5px;
+            right:-21px;
+            z-index:1;  /*le otorgamos un z-index bajo para que se posicione debajo del trinagulo negro*/
+        }
+    /*Estos son los estilos de la hamburguesa del menú que abre y cierra el mismo*/
+    .menu-toogle {
+      position:absolute; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
+      width: 35px;
+      line-height:1.1;
+      text-align:center;
+      top:6.5px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+      left: 8px; 
+      border-radius:3px;
+      background-color: #2b61528e; /*Color de cuadrito de menú*/
+      transition: all .5s ease; /*Añadimos una transición para que realice un desplazamineto suave*/
+      z-index:10;
+    }
+      /*Añadimos la haburguesa y le damos unos estilos*/
+      .menu-toogle::before {
+          cursor: help;
+        content:"☰";
+        font-size:32px;
+        color:rgb(243, 240, 240);
+      }
+  
+  /* Le damos unos estilos al contenedor principal*/
+  
+  
+      /*Estos son los estilos que le dan la funcionalidad al menú*/
+      /*El checkbox según esté activado o no hará que el menú aparezca o desaparezca*/
+      .checkbox {
+        display:none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+      }
+      .checkbox:checked ~ .nav {
+        left:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+        position:fixed; /* Fijamos el menú lateral para que se desplace cuando hagamos scroll*/
+      }
+      .checkbox:checked ~ .main-w {
+        margin-left:200px; /*Cuando el checkbox asigna un margen al contenedor principal para que se desplace junto con el menú*/
+      }
+      .checkbox:checked ~ .menu-toogle { 
+        left:208px;
+        position:fixed; /*Fijamos la hamburgues para que se desplace junto con el menú*/
+      }
+  
+      

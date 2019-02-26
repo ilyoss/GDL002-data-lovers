@@ -2,3 +2,4 @@
 document.getElementById("organizeByAuthor").addEventListener("click", displayNewsByTitle);
 document.getElementById("organizeByDate").addEventListener("click", displayNewsByDate);
 document.getElementById("filterByAuthor").addEventListener("click", filterNewsByAuthor);
+document.getElementById("filterByAuthor").addEventListener("click", filterNewsByAuthor);

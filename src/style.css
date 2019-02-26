@@ -85,12 +85,13 @@ img {
   margin: 0;
 }
 
-.newsPhoto {
-  z-index: -1;
+.newsDate {
+  display: none;
+  font-size: 0.8rem;
 }
 
-.newsLink {
-  visibility: hidden;
+.news:hover .newsDate {
+  display: block;
 }
 
 .news:hover .newsBrief{

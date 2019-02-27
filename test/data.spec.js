@@ -1,28 +1,61 @@
 require('../src/data.js');
-const steam = require('../src/data/steam/steam.json');
+require('../src/data/steam/steam.js');
 
-//Test to make sure STEAM is an object
-describe('STEAM', () => {
+// describe('STEAM', () => {
+//   it('Should be an object', () => {
+//     expect(typeof window.STEAM).toBe('object');
+//   });
+// });
+
+describe('dataLovers', () => {
   it('Should be an object', () => {
-    expect(typeof steam).toBe('object');
+    expect(typeof window.dataLovers).toBe('object');
   });
 });
 
 //Tests to make sure my functions are correct functions
-describe('getTitles', () => {
+
+describe('newsTemplate', () => {
   it('Should be a function', () => {
-    expect(typeof window.dataLovers.getTitles).toBe('function');
+    expect(typeof window.dataLovers.newsTemplate).toBe('function');
   });
 });
 
-describe('getAuthors', () => {
+describe('dynamicSort', () => {
   it('Should be a function', () => {
-    expect(typeof window.dataLovers.getAuthors).toBe('function');
+    expect(typeof window.dataLovers.dynamicSort).toBe('function');
   });
 });
 
-describe('getDate', () => {
+describe('displayNewsByTitle', () => {
   it('Should be a function', () => {
-    expect(typeof window.dataLovers.getDate).toBe('function');
+    expect(typeof window.dataLovers.displayNewsByTitle).toBe('function');
+  });
+});
+
+describe('filterNewsByAuthor', () => {
+  it('Should be a function', () => {
+    expect(typeof window.dataLovers.filterNewsByAuthor).toBe('function');
+  });
+
+  // it("Should return a smaller array of data", () => {
+  //     expect(window.dataLovers.filterNewsByAuthor).toBe(4);
+  // });
+
+});
+
+describe('displayNewsByDate', () => {
+  it('Should be a function', () => {
+    expect(typeof window.dataLovers.displayNewsByDate).toBe('function');
+  });
+});
+
+describe('calculateDate', () => {
+  it('Should be a function', () => {
+    expect(typeof window.dataLovers.calculateDate).toBe('function');
+  });
+
+  it("Should return a human readable date", () => {
+      expect(window.dataLovers.calculateDate(1551290656)).toBe('27-2-2019');
   });
 });

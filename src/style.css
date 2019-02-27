@@ -86,12 +86,13 @@ img {
 }
 
 .newsDate {
-  display: none;
+  visibility: hidden;
   font-size: 0.8rem;
+  position: relative;
 }
 
 .news:hover .newsDate {
-  display: block;
+  visibility: visible;
 }
 
 .news:hover .newsBrief{

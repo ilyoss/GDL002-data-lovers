@@ -16,7 +16,4 @@ $(document).ready(function(){
 	});
  
 }); 
-//*****//
-//
-//cambiar imagen de fondo por una lista aleatoria.
-//
+

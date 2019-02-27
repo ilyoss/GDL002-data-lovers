@@ -16,18 +16,56 @@ img {
     height: auto;
     
 }
-
-.app-title {
-    text-align: right ;
-    font-weight: normal;
-    font-size: 5.6rem;
-
-    
-}
-
 #root {
     text-align: center;
 }
+.dropdownMenu {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: inline-block;
+    z-index: 1;
+}
+.dropBtn {
+     /*ventana desplagable de seleccion*/
+    color: rgba(249, 250, 250, 0.945);
+    padding: 25px;
+    font-size: 15px;
+    border: double;
+    height: 20px;
+    text-align: center;
+    font-family: "Chelsea Market";
+    border-radius: 100px;
+    font-weight: bold;
+    background: #07070777;
+   
+}
+
+
+
+.dropdownElements {
+    display: none;
+    font-size: 15px;
+    position: absolute;
+    background-color: #f3f6f7;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(8, 105, 105, 0.356); /*sombra de menu ordenar por */
+    z-index: 1;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+}
+
+.dropdownElements a {
+     color: rgba(8, 8, 8, 0.692); /*color de letra de pestaña de seleccion*/
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+     font-family: "Chelsea market";
+    }
+
+.dropdownElements a:hover { background-color: rgba(5, 89, 128, 0.384); }
+.dropdownMenu:hover .dropdownElements { display: block;}
+.dropdownMenu:hover .dropBtn { background: #04828b77;}
 
 .news {
     max-width: 400px;
@@ -54,7 +92,6 @@ img {
     margin: 10px;
     
 }
-
 .newsBrief {
     visibility: hidden;
     font-size: 1.1rem; /*tamaño de letra/resumen en la noticia*/
@@ -62,55 +99,49 @@ img {
     font-weight: bold;
     
 }
-
-.newsPhoto {
-    z-index: -1;
-    
-}
-
-.newsLink {
-    visibility: hidden;
-    
-}
-
-.news:hover .newsBrief {
-    visibility: visible;
-    
-}
-
-.news:hover .newsTitle {
+.newsDate{
     display: none;
-   
+    font-size: 0.8rem;
 }
 
-.news:hover .newsAuthor {
-    display: none;
-}
 
-.news:hover .newsLink {
+.news:hover .newsDate {
+    display: block;
+  }
+  
+  .news:hover .newsBrief{
     visibility: visible;
-     
-}
-
-.news:hover .newsPhoto {
+  }
+  
+  .news:hover .newsTitle{
+    display: none;
+  }
+  
+  .news:hover .newsAuthor{
+    display: none;
+  }
+  
+  .news:hover .newsPhoto {
     visibility: hidden;
-   
-}
-
-.news-photo {
+  }
+  
+  .news:hover{
+    cursor: pointer;
+  
+  }
+  
+  .news-photo {
     float: left;
     width: 40%;
     margin-right: 15px;
-    opacity: 0.5;
-    
-}
-
-.newsTitle {
+  }
+  
+  .newsTitle {
     font-size: 1rem;
     font-weight: normal;
     margin: 0 0 1rem 0;
-}
-
+  }
+  
 .newsAuthor {
     font-size: 0.9rem;
     color: rgb(172, 133, 5);
@@ -138,7 +169,11 @@ img {
     margin: 0;
 }
 
-
+.app-title {
+    text-align: right ;
+    font-weight: normal;
+    font-size: 5.6rem;    
+}
 
 header {
     width: 100%;
@@ -181,58 +216,6 @@ header {
         visibility: visible;
         opacity: 1;
     }
-
-.dropBtn {
-     /*ventana desplagable de seleccion*/
-    color: rgba(249, 250, 250, 0.945);
-    padding: 25px;
-    font-size: 15px;
-    border: double;
-    height: 20px;
-    text-align: center;
-    font-family: "Chelsea Market";
-    border-radius: 100px;
-    font-weight: bold;
-    background: #07070777;
-   
-}
-
-.dropdownMenu {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    display: inline-block;
-    z-index: 1;
-}
-
-.dropdownElements {
-    display: none;
-    position: absolute;
-    background-color: #f3f6f7;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(8, 105, 105, 0.356); /*sombra de menu ordenar por */
-    z-index: 1;
-}
-
-    .dropdownElements a {
-        color: rgba(8, 8, 8, 0.692); /*color de letra de pestaña de seleccion*/
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        font-family: "Chelsea market";
-    }
-
-        .dropdownElements a:hover {
-            background-color: rgba(5, 89, 128, 0.384);
-        }
-
-.dropdownMenu:hover .dropdownElements {
-    display: block;
-}
-
-.dropdownMenu:hover .dropBtn {
-    background: #04828b77;
-}
 
 .url {
     cursor: url(myBall.cur),auto;

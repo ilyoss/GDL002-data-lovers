@@ -36,17 +36,19 @@
   
     
         <!--Division donde se contiene el titulo y el menu dropdown para los filtros de las noticias-->
+        
         <div class="header">
-          
-          <div class="dropdownMenu">
-            <button class="dropBtn" type="button" name="button">Filtrar</button>
-            <div class="dropdownElements">
-              <a href="#">Orden Alfabetico</a>
-              <a href="#">Autor</a>
-              <a href="#">Fecha</a>
+            
+            <div class="dropdownMenu">
+              <button class="dropBtn" type="button" name="button">Filtrar</button>
+              <div class="dropdownElements">
+                <a id="organizeByDate"href="#">Ordenar por fecha</a>
+                <a id="organizeByAuthor"href="#">Ordenar por autor A-Z</a>
+                <a id="filterByAuthor"href="#">Filtrar noticias con autor</a>
+              </div>
             </div>
           </div>
-        </div>
+      
     
 <!--carousel-->
 <div id="carousel">
@@ -144,10 +146,13 @@
        
       
     </section>
-        <script src="./data/steam/steam.js"></script>
-        <script src="data.js"></script>
-        <script src="main.js"></script>
-        <script src="index.html"></script>
+
+    <div id="root"></div>
+      
+          <script src="./data/steam/steam.js"></script>
+          <script src="data.js"></script>
+      <script src="main.js"></script>
+       
     
 </body>
 </html>

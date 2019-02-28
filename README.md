@@ -34,7 +34,7 @@ Historias de usuario
         El usuario al hacer click en la opción de "Filtrar noticias por autor", dentro del menú "Filtrar", podrá visualizar las únicamente las noticias que tengan autor.
 
 Prototipo de baja fidelidad
-![Prototipo de como se veria la pantalla sin mostrar funcionalidad]("https://i.ibb.co/fNC315X/Prototipo-4.jpg")
+![Prototipo de como se veria la pantalla sin mostrar funcionalidad](https://i.ibb.co/fNC315X/Prototipo-4.jpg)
 
 
 Diseño de interfaz de usuario

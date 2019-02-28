@@ -1,81 +1,57 @@
-//I save my news data as an array in my variable
-const news = STEAM.appnews.newsitems;
-//I run my menu function to load my news on the screen
-menu();
-//I print my news elements inside my root div on HTML.
-function menu(){
-  document.getElementById("root").innerHTML = `
-  ${news.map(newsTemplate).join("")}`
-}
-//Function for the template of each news module/card
-function newsTemplate(news){
-  let date = calculateDate(news.date);
-  return `
-    <div onclick="window.open('${news.url}');" class="news">
-    <h2 class="newsTitle"><strong>${news.title}</strong></h2>
-    <p class="newsAuthor">${news.author}</p>
-    <p class="newsBrief">${news.contents}</p>
-    <p class="newsDate">${date}</p>
-    </div>
-  `;
-}
-//Function to filter news by whichever property from the Object
-function dynamicSort(property) {
-    let sortOrder = 1;
-    if(property[0] === "-") {
-        sortOrder = -1;
-        property = property.substr(1);
-    }
-    return function (a,b) {
-        if(sortOrder == -1){
-            return b[property].localeCompare(a[property]);
-        }else{
-            return a[property].localeCompare(b[property]);
-        }
-    }
-}
-//Function to empty my root div and erase the news, before I displat them organized based on the filters
-function emptyDiv(){
-  document.getElementById("root").innerHTML = "";
-}
-//Function that empties my root div and displays the news arranged by title A-Z
-function displayNewsByTitle(){
-  let sortedNewsByTitle = news;
-  sortedNewsByTitle.sort(dynamicSort("title"));
-  emptyDiv();
-  //I print my news elements inside my root div on HTML.
-  document.getElementById("root").innerHTML = `
-  ${sortedNewsByTitle.map(newsTemplate).join("")}`
-}
-//Function to only display news with an author
-function filterNewsByAuthor(){
-  const sortedNewsByAuthor = news;
-  sortedNewsByAuthor.sort(dynamicSort("author"));
-  let newsWithAuthors = [];
-  emptyDiv();
-  for(let i = 0; i < news.length; i++){
-    //If the text value in author is not empty, then I add that element to my new array
-    if(sortedNewsByAuthor[i].author != ""){
-      newsWithAuthors.push(sortedNewsByAuthor[i]);
-    }
+const STEAM = () => {
+  return 'steam';
+};
+
+//I create my object DataLovers so I can access these functions through the other js file
+window.dataLovers = {
+  getTitles: getTitles,
+  getAuthors: getAuthors,
+  getDate: getDate,
+};
+
+//I check the number of news items available in the data and save it as a constant variable
+// const newsNumber = Object.keys(STEAM.appnews.newsitems);
+const newsNumber = 10;
+
+//I call my functions to initialize my arrays for further use on main.js
+getAuthors(newsNumber);
+getTitles(newsNumber);
+getDate(newsNumber);
+
+//Function to save the titles of each news in an array
+function getTitles(newsNumber){
+  //I declare my array as empty
+  let titlesArray = [];
+  //Loop to go through the number of items available in the data
+  for(let i = 0; i < newsNumber.length; i++){
+    //I save the properties of my object[i] in a variable
+    let getObjectProperties = Object.values(STEAM.appnews.newsitems[i]);
+    //I access the title and save it in my array
+    titlesArray[i] = getObjectProperties[1];
   }
-  //I print my news elements inside my root div on HTML.
-  document.getElementById("root").innerHTML = `
-  ${newsWithAuthors.map(newsTemplate).join("")}`
 }
-
-//Function that empties my root div and displats the news arranged by date (most recent)
-function displayNewsByDate(){
-  let sortedNewsByDate = news;
-  sortedNewsByDate.sort(function(a, b) {
-    return a.date - b.date;
-  });
-  emptyDiv();
-  //I print my news elements inside my root div on HTML.
-  document.getElementById("root").innerHTML = `
-  ${sortedNewsByDate.map(newsTemplate).join("")}`
+//Function to save the authors of each news
+function getAuthors(newsNumber){
+  //I declare my array
+  let authorsArray = [];
+  for(let i = 0; i < newsNumber.length; i++){
+    //I save the properties of my object[i] in a variable
+    let getObjectProperties = Object.values(STEAM.appnews.newsitems[i]);
+    //I access the author value and save it in the array
+    authorsArray[i] = getObjectProperties[4];
+  }
 }
-
+//Function to save the date of each news in an array
+function getDate(newsNumber){
+  //Declaring my array
+  let dateArray = [];
+  for(let i = 0; i < newsNumber.length; i++){
+    //I save the properties of my object[i] in a variable
+    let getObjectProperties = Object.values(STEAM.appnews.newsitems[i]);
+    //I access the date and convert it with my other function before saving its value in the array
+    dateArray[i] = calculateDate(getObjectProperties[7]);
+  }
+}
 //Function to convert the date (EPOCH to Day/Month/Year format)
 function calculateDate(epochDate){
   let humanTime;
@@ -84,15 +60,11 @@ function calculateDate(epochDate){
   let year = date.getFullYear();
   let month = date.getMonth() + 1;
   let day = date.getDate();
+  // let hours = date.getHours();
+  // let minutes = date.getMinutes();
+  // let seconds = date.getSeconds();
+  //I paste the data I need to show for the date and return that value as a string
   humanTime = day + "-" + month + "-" + year;
   return humanTime;
 }
-
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
-const example = () => {
-  return 'example';
-};
-
 window.example = example;

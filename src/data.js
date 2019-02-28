@@ -37,21 +37,16 @@ window.dataLovers = {
       let sortedNewsByTitle = news;
       sortedNewsByTitle.sort(window.dataLovers.dynamicSort("title"));
       //I print my news elements inside my root div on HTML.
-      window.dataLovers.printNews(sortedNewsByTitle);
+      return sortedNewsByTitle;
     },
 
     filterNewsByAuthor: function(news){
       const sortedNewsByAuthor = news;
-      sortedNewsByAuthor.sort(window.dataLovers.dynamicSort("author"));
-      let newsWithAuthors = [];
-      document.getElementById("root").innerHTML = "";
-      for(let i = 0; i < news.length; i++){
-        //If the text value in author is not empty, then I add that element to my new array
-        if(sortedNewsByAuthor[i].author != ""){
-          newsWithAuthors.push(sortedNewsByAuthor[i]);
-        }
-        window.dataLovers.printNews(newsWithAuthors);
-      }
+
+      let newsWithAuthors = sortedNewsByAuthor.filter(function(news){
+        return news.author != "";
+      });
+      return newsWithAuthors;
     },
 
     displayNewsByDate: function(news){
@@ -59,7 +54,7 @@ window.dataLovers = {
       sortedNewsByDate.sort(function(a, b) {
         return a.date - b.date;
       });
-      window.dataLovers.printNews(sortedNewsByDate);
+      return sortedNewsByDate;
     },
 
     calculateDate: function(epochDate){

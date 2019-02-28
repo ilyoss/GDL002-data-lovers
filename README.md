@@ -36,6 +36,17 @@ Historias de usuario
 Prototipo de baja fidelidad
 
 
+![Prototipo pantalla completa](https://scontent-qro1-1.xx.fbcdn.net/v/t1.15752-9/53218992_574971473014735_3317028192165822464_n.jpg?_nc_cat=111&_nc_ht=scontent-qro1-1.xx&oh=042bbc7464cb1cce28b89abc64a54fd3&oe=5CE807B5)
+![Prototipo Responsivo](https://scontent-qro1-1.xx.fbcdn.net/v/t1.15752-9/52977084_2206105822781197_8346173774655127552_n.jpg?_nc_cat=103&_nc_ht=scontent-qro1-1.xx&oh=a7ba6ab2116c042010e61b2204f4df44&oe=5CDB3BED)
+
+Diseño de interfaz de usuario
+![Pantalla principal](https://i.ibb.co/fNC315X/Prototipo-4.jpg)
+![Al dar click en filtrar](https://i.ibb.co/fNC315X/Prototipo-4.jpg)
+![Se despliega una ventana con las opciones de filtrado](https://i.ibb.co/1JPccRh/Prototipo-4-1.jpg)
+![Click en menú ](https://i.ibb.co/kXwxgvj/Prototipo-1-1.jpg)
+![Al dar click en ☰ ](https://i.ibb.co/nwN81L8/Prototipo-3.jpg)
+
+
 Diseño de interfaz de usuario
 Problemas de tests de utilidad
 Checklist

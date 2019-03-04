@@ -50,6 +50,7 @@ img {
   display: block;
   z-index: 1;
   line-height: 20px;
+  margin-top: 150px;
 }
 
 .dropBtn {
@@ -58,6 +59,7 @@ img {
  padding: 25px;
  font-size: 20px;
  border: double;
+ line-height: 0px;
  height: 20px;
  text-align: center;
  font-family: "Permanent Marker";

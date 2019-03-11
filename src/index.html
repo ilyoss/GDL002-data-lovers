@@ -2,29 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Lato" rel="stylesheet">
   </head>
-  <body>
+  <body class="body">
 
-    <button type="button" name="button"></button>
+  <!--Header, where I display my H1 and the navigation bar-->
+  <header>
+    <h1>labanews</h1>
+    <h2>All you need to know about TF2</h2>
+      <ul class="menuItems" id="navBar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropBtn">Filter</a>
+          <div class="dropdownElements">
+            <a href="#" id="organizeByDate">Ordenar por fecha (menos reciente)</a>
+            <a href="#" id="organizeByAuthor">Ordenar por título (A-Z)</a>
+            <a href="#" id="filterByAuthor">Filtrar noticias con autor</a>
+          </div>
+        </li>
+      </ul>
+  </header>
 
-    <div class="header">
-      <h1>Laba News</h1>
-      <div class="dropdownMenu">
-        <button class="dropBtn" type="button" name="button">Filtrar</button>
-        <div class="dropdownElements">
-          <a href="#" id="organizeByDate">Ordenar por fecha</a>
-          <a href="#" id="organizeByAuthor">Ordenar por autor AZ</a>
-          <a href="#" id="filterByAuthor">Filtrar noticias con autor</a>
-        </div>
-      </div>
-    </div>
+    <!--Div where I will display my news modules-->
+    <div class="root" id="root"></div>
 
-    <div id="root"></div>
-
+    <!--Script sources for the js files and data.-->
     <script src="./data/steam/steam.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
+
   </body>
 </html>

@@ -1,3 +1,12 @@
+//Function to add images to my news array
+function addImage(news, images){
+  let i = 0;
+
+  for(i = 0; i < news.length; i++){
+    console.log(i);
+    news[i].pic = images[i];
+  }
+}
 //I declare my dataLovers object, where I keep my data functions
 window.dataLovers = {
 
@@ -5,10 +14,13 @@ window.dataLovers = {
       let date = window.dataLovers.calculateDate(news.date);
       return `
         <div onclick="window.open('${news.url}');" class="news">
-        <h2 class="newsTitle"><strong>${news.title}</strong></h2>
-        <p class="newsAuthor">${news.author}</p>
-        <p class="newsBrief">${news.contents}</p>
-        <p class="newsDate"><i>${date}</i></p>
+        <div class="newsBg" style="background-image: url(${news.pic});"></div>
+          <div class="newsText">
+          <h3 class="newsTitle"><strong>${news.title}</strong></h3>
+          <p class="newsAuthor">${news.author}</p>
+          <p class="newsBrief">${news.contents}</p>
+          <p class="newsDate"><i>${date}</i></p>
+          </div>
         </div>
       `;
     },

@@ -1,54 +1,90 @@
+html {
+  background: #f2f2f3 none;
+}
+
 body {
-  font-family: sans-serif;
-  background-color: #dedede;
-  color: #333;
-  padding: 20px 0 28px 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
   margin: 0;
 }
 
-.header{
-  font-size: 1.5rem;
+header {
+  width: 100%;
+  background-color: #1d1e22;
+}
+
+.root {
   text-align: center;
+  padding: 10px;
+  align-items: center;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+h1 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 2.5rem;
+  text-align: left;
+  color: white;
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 80px;
 }
 
-#root {
+h2 {
+  font-size: 1rem;
+  margin-top: 0;
+  color: #ffc60b;
+  padding-left: 80px;
+}
+
+h3 {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F26722;
+  padding-left: 70px;
+}
+
+li {
+  float: left;
+  display: inline;
+}
+
+li a, .dropBtn {
+  display: inline-block;
+  color: white;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.dropdownMenu {
-  position: absolute;
-  right: 100px;
-  top: 10px;
+li.dropdown {
   display: inline-block;
 }
 
-.dropBtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 15px;
-  border: none;
-  height: 30px;
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-  text-align: center;
+li a:hover, .dropdown:hover .dropBtn {
+  background-color: #333;
+}
+
+.dropdown:hover .dropdownElements {
+  display: block;
+}
+
+.body {
+  color: #333;
 }
 
 .dropdownElements {
   display: none;
-  font-size: 15px;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  border-radius: 20px;
-  border-top-left-radius: 0;
 }
 
 .dropdownElements a {
@@ -56,39 +92,84 @@ img {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  text-align: left;
 }
 
 .dropdownElements a:hover {background-color: #ddd;}
-.dropdownMenu:hover .dropdownElements {display: block;}
-.dropdownMenu:hover .dropBtn {background-color: #3e8e41;}
 
 .news {
-  max-width: 300px;
-  height: 200px;
-  padding: 20px;
-  margin: 20px;
+  width: 390px;
+  height: 250px;
+  margin-right: 20px;
+  margin-top: 20px;
   background-color: #fff;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  position: relative;
   flex-direction: row;
   display: inline-block;
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-  border-radius: 30px
+  cursor: pointer;
 }
 
+.newsBg {
+  height: 100%;
+  background-size: cover;
+}
+
+.newsText {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.newsTitle {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.newsAuthor {
+  font-size: 0.9rem;
+  color: white;
+  margin: 0;
+  padding-bottom: 10px;
+}
 
 .newsBrief {
   visibility: hidden;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0;
+  color: white;
+  padding: 20px;
 }
 
 .newsDate {
   visibility: hidden;
   font-size: 0.8rem;
   position: relative;
+  color: white;
+}
+
+.news:hover .overlay{
+  margin-top: -2em;
+}
+
+.news:hover{
+  cursor: pointer;
+}
+
+.news:hover > div.newsBg {
+    -webkit-filter: brightness(40%);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .news:hover .newsDate {
@@ -100,70 +181,9 @@ img {
 }
 
 .news:hover .newsTitle{
-  display: none;
+  visibility: hidden;
 }
 
 .news:hover .newsAuthor{
   display: none;
-}
-
-.news:hover .newsPhoto {
-  visibility: hidden;
-}
-
-.news:hover{
-  cursor: pointer;
-
-}
-
-.news-photo {
-  float: left;
-  width: 40%;
-  margin-right: 15px;
-}
-
-.newsTitle {
-  font-size: 1rem;
-  font-weight: normal;
-  margin: 0 0 1rem 0;
-}
-
-.newsAuthor {
-  font-size: 0.9rem;
-  color: #888;
-  vertical-align: middle;
-}
-
-.newsLink {
-  font-size: 0.9rem;
-}
-
-.foods-list {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  left: 17px;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-
-.footer {
-  font-size: 0.7rem;
-  color: #888;
-  text-align: center;
-  margin: 0;
-}
-
-.ir-arriba {
-   display: none;
-   padding: 20px;
-   border-radius: 100px;
-   background: #e4d50a;
-   font-size: 20px;
-   color: #fff;
-   cursor: pointer;
-   position: fixed;
-   bottom: 20px;
-   right: 20px;
-   z-index: 1;
 }

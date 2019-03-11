@@ -3,7 +3,6 @@ function addImage(news, images){
   let i = 0;
 
   for(i = 0; i < news.length; i++){
-    console.log(i);
     news[i].pic = images[i];
   }
 }

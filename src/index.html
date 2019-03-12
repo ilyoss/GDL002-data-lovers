@@ -2,40 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Lato" rel="stylesheet">
   </head>
-  <body>
-    <button type="button" id="scroll">Top</button>
-    <!--carousel-->
-    <div id="carousel">
-        <figure><img src="https://cdn.suwalls.com/wallpapers/games/team-fortress-2-pattern-28759-1920x1080.jpg" alt=""></figure>
-        <figure><img src="https://media.moddb.com/images/members/1/383/382828/Wallpaper_TF2_posters_lower_quality.jpg" alt=""></figure>
-        <figure><img src="https://ae01.alicdn.com/kf/HTB1k1ojNVXXXXbmXVXXq6xXFXXXT/Special-Offer-Promotion-Rectangle-Canvas-Painting-Cuadros-Decoracion-Team-fortress-2-Poster-4-Sizes-Fabric-Canvas.jpg_640x640.jpg" alt=""></figure>
-        <figure><img src="https://c.wallhere.com/photos/f0/20/Team_Fortress_2_humor_Pyro_character_video_games_blood-356150.jpg" alt=""></figure>
-        <figure><img src="https://cdn.playbuzz.com/cdn/247e3092-b1ae-4df7-aa12-ed49ede31a42/5a16f01a-632d-425f-950e-b5a174ed5d89.png" alt=""></figure>
-        <figure><img src="https://wiki.teamfortress.com/w/images/thumb/d/dd/Medicviolin.png/1024px-Medicviolin.png" alt=""></figure>
-        <figure><img src="https://media.moddb.com/images/members/1/383/382828/Wallpaper_TF2_posters_lower_quality.jpg" alt=""></figure>
-        <figure><img src="https://images7.alphacoders.com/311/thumb-1920-311527.jpg" alt=""></figure>
-        <figure><img src="https://scontent-qro1-1.xx.fbcdn.net/v/t1.15752-9/52692396_2286694088266178_9087314001267785728_n.jpg?_nc_cat=108&_nc_ht=scontent-qro1-1.xx&oh=eae064f851c7273ee275af39985258d4&oe=5CE24BE2" alt=""></figure>
-        <figure><img src="https://c.wallhere.com/photos/94/91/Team_Fortress_2_Scout_character_soldier_heavy_demo_man_Sniper_TF2_Medic_Engineer_character-226870.jpg" alt=""></figure>
-    </div>
+  <body class="body">
 
-    <h1>Laba News</h1>
+    <!--Header, where I display my H1 and the navigation bar-->
+    <header>
+      <h1>labanews</h1>
+      <h2>All you need to know about TF2</h2>
+        <ul class="menuItems" id="navBar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropBtn">Filter</a>
+            <div class="dropdownElements">
+              <a href="#" id="organizeByDate">Ordenar por fecha (menos reciente)</a>
+              <a href="#" id="organizeByAuthor">Ordenar por título (A-Z)</a>
+              <a href="#" id="filterByAuthor">Filtrar noticias con autor</a>
+            </div>
+          </li>
+        </ul>
+    </header>
 
-    <div class="dropdownMenu">
-      <button class="dropBtn" type="button" name="button">Filtrar</button>
-      <div class="dropdownElements">
-        <a href="#" id="organizeByDate">Ordenar por fecha (menos reciente)</a>
-        <a href="#" id="organizeByAuthor">Ordenar por título (A-Z)</a>
-        <a href="#" id="filterByAuthor">Filtrar noticias con autor</a>
-      </div>
-    </div>
+    <!--Div where I will display my news modules-->
+    <div class="root" id="root"></div>
 
-    <div id="root"></div>
-
+    <!--Script sources for the js files and data.-->
     <script src="./data/steam/steam.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
+
   </body>
 </html>

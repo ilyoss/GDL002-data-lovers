@@ -14,21 +14,29 @@
       <h1>labanews</h1>
       <h2>All you need to know about TF2</h2>
         <ul class="menuItems" id="navBar">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
           <li class="dropdown">
-            <a href="javascript:void(0)" class="dropBtn">Filter</a>
+            <a href="javascript:void(0)" class="dropBtn">Filter <i class="arrow down"></i></a>
             <div class="dropdownElements">
               <a href="#" id="organizeByDate">Ordenar por fecha (menos reciente)</a>
               <a href="#" id="organizeByAuthor">Ordenar por título (A-Z)</a>
               <a href="#" id="filterByAuthor">Filtrar noticias con autor</a>
             </div>
           </li>
+          <li><a href="https://store.steampowered.com/app/440/Team_Fortress_2/" target="_blank">Join Team Fortress 2 today!</a></li>
         </ul>
     </header>
 
     <!--Div where I will display my news modules-->
     <div class="root" id="root"></div>
+
+    <!--Footer-->
+    <footer>
+      <div class="footerContent">
+        <p>LabaNews is a webpage made by Ily Treviño and Alex Áviles for the project Data Lovers. <a href="https://www.facebook.com/Laba-News-391420508354050/" target="_blank">Visit our FB Page</a> to know more about us!</p>
+        <p>Got any feedback? <a href="mailto: feedback@labanews.com"> Contact us!</a> Send us an email with your ideas, we appreciate it deeply!</p>
+      </div>
+
+    </footer>
 
     <!--Script sources for the js files and data.-->
     <script src="./data/steam/steam.js"></script>

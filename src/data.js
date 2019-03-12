@@ -18,7 +18,7 @@ window.dataLovers = {
           <h3 class="newsTitle"><strong>${news.title}</strong></h3>
           <p class="newsAuthor">${news.author}</p>
           <p class="newsBrief">${news.contents}</p>
-          <p class="newsDate"><i>${date}</i></p>
+          <p class="newsDate">${date}</p>
           </div>
         </div>
       `;

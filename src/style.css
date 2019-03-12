@@ -1,5 +1,3 @@
-@import "compass/css3";
-
 html {
   background: #f2f2f3 none;
 }
@@ -83,6 +81,11 @@ footer {
 .footerContent a {
   text-decoration: none;
   color: #F26722;
+}
+
+.footerContent p:first-child {
+  border-bottom: 1px solid #ffc60b;
+  padding-bottom: 20px;
 }
 
 .footerContent p a {

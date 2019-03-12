@@ -80,7 +80,7 @@ footer {
 
 .footerContent a {
   text-decoration: none;
-  color: #F26722;
+  color: #ffc60b;
 }
 
 .footerContent p:first-child {
@@ -93,7 +93,7 @@ footer {
 }
 
 .footerContent a:visited{
-  color: #f6996a;
+  color: #ffc60b;
 }
 
 .down {
